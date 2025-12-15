@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    scroll-behavior: smooth;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------------------
+    2. CTA BUTTON STYLES 
+-------------------- */
+.cta-button {
+    /* Text appearance */
+    color: white; /* White text on a colored background */
+    font-size: 1.25rem; /* Larger font size */
+    font-weight: bold; 
+    text-transform: uppercase; /* Makes it feel important */
+
+    /* Sizing and Spacing */
+    display: inline-block; /* Allows padding and margin */
+    padding: 15px 30px; /* Generous padding for a large hit area */
+    margin-top: 20px;
+
+    /* Visual Styling */
+    background-color: #3b82f6; /* A clear, striking blue */
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+    /* Interactivity */
+    cursor: pointer; /* Change mouse pointer to indicate clickability */
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth hover effects */
+}
+
+/* Hover and Active states (for user feedback) */
+.cta-button:hover {
+    background-color: #2563eb; /* Slightly darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:active {
+    /* Push-down effect when clicked */
+    transform: translateY(2px); 
+}
+/* --------------------
+    3. HEADER STYLES (Updated)
+-------------------- */
+.main-header {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e0e0e0;
+    
+    /* A. KEY CHANGE: Pushes content to the edges */
+    display: flex;
+    justify-content: space-between; /* This puts max space between the Logo (left) and Nav (right) */
+    align-items: center; 
+}
+
+/* Style the link group for the logo and name */
+.logo-link {
+    display: flex; /* Make logo and name side-by-side */
+    align-items: center;
+}
+
+/* --------------------
+    4. HEADER TEXT LAYOUT 
+-------------------- */
+.header-text-container {
+    /* 1. KEY: Apply Flexbox to the parent */
+    display: flex; 
+    
+    /* 2. Pushes the H1 and H2 apart */
+    justify-content: space-between; 
+    
+    /* 3. Vertically aligns the content in the center */
+    align-items: center; 
+    
+    /* Give it some space if it's placed right next to the logo */
+    margin-left: 20px; 
+    width: 100%; /* Important: tells the container to take all available width */
+}
+
+/* Style the main title */
+.company-name {
+    font-size: 3rem; /* Make it large and prominent */
+    font-weight: 900;
+    color: #333;
+    /* Optional: Ensure the H1 doesn't shrink */
+    flex-shrink: 0; 
+    margin-right: 40px; /* Add some space between the title and tagline */
+}
+
+/* Style the tagline */
+.tagline {
+    font-size: 1rem;
+    color: #666; /* Subtler color */
+    font-weight: 400;
+    line-height: 1.6; /* Improves readability for multi-line text */
+    text-align: right; /* Align text inside H2 to the right side of the container */
+}
+
+/* --------------------
+    5. SECTION STYLES 
+-------------------- */
+.features-section {
+    /* Add vertical space above and below the entire section */
+    padding: 80px 40px; 
+    
+    /* Give it a subtle background to visually separate it from other sections */
+    background-color: #f9f9f9; 
+    
+    /* Center the section content on the page and limit its max width */
+    max-width: 1200px; 
+    margin: 0 auto;
+    text-align: center; /* Center the main H2 title */
+}
+
+/* Style the main heading */
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* Use Flexbox or Grid to lay out the feature items horizontally */
+.feature-list {
+    display: flex; 
+    justify-content: space-around; /* Space out the feature items */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on small screens */
+    gap: 20px;
+}
