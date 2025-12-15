@@ -4,10 +4,17 @@
     padding: 0;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #f4f4f9;
-    scroll-behavior: smooth;
+body {
+    font-family: 'Roboto', sans-serif; 
+
+    line-height: 1.6; 
+    color: #333;
+}
+
+h1, h2, h3 {
+    /* Example: Use a bolder, more distinctive font for titles */
+    font-family: 'sans-serif', sans-serif;
+    font-weight: 700; /* Bolder weight */
 }
 
 ul, ol{
@@ -141,4 +148,170 @@ a{
     justify-content: space-around; /* Space out the feature items */
     flex-wrap: wrap; /* Allows items to wrap onto the next line on small screens */
     gap: 20px;
+}
+
+
+
+/* --------------------
+    6. IMAGE GRID STYLES
+-------------------- */
+.product-gallery-section {
+    /* Use a generous padding to give space around the images */
+    padding: 80px 40px; 
+    text-align: center;
+}
+
+.image-grid-container {
+    display: flex; 
+    width: 100%; 
+    
+    /* Ensure no wrapping—we want them on one row */
+    flex-wrap: nowrap; 
+    
+    /* Space out the items evenly */
+    justify-content: space-between; 
+    
+    /* Remove the 'margin: 0 auto;' if it was causing issues with full-width */
+    margin: 0; 
+    gap: 20px; /* Space between the items */
+}
+
+.grid-item {
+    /* 2. KEY: Force each item to take exactly one-third of the available space */
+    /* flex-grow: 1, flex-shrink: 0, basis: 33.33% */
+    flex: 1 0 30%; 
+    text-align: center;
+    /* Remove the individual padding here to make the images fill the space */
+    padding: 2%; 
+}
+
+.grid-item img {
+    /* Ensure images fill the 1/3 width of their parent container */
+    width: 100%; 
+    height: 700px;
+
+    object-fit: cover;
+}
+
+/* --------------------
+    7. DARK FEATURES SECTION STYLES 
+-------------------- */
+.features-section {
+    /* Set the dark background color */
+    background-color: hsl(212, 6%, 41%); /* A dark charcoal/navy blue (A professional, common choice) */
+    
+    /* Set the text color to white or a light gray so it's readable on the dark background */
+    color: #ffffff; /* Pure white text */
+    
+    /* Add generous vertical padding for visual comfort */
+    padding: 80px 40px; 
+    
+    /* Center your content container within the section */
+    max-width: 100%; 
+}
+
+/* You must also style the headings inside this section to be light! */
+.features-section h2, 
+.features-section h3 {
+    color: #ffffff; 
+    /* The heading color defined previously (e.g., #333) would be invisible here! */
+}
+
+/* Optional: Style any links or buttons inside the dark section */
+.features-section a {
+    color: #ffffff; /* Use your primary brand color */
+}
+
+/* --------------------
+    8. PRIMARY BUTTON STYLES 
+-------------------- */
+.button-primary {
+    /* 1. Make it block-like and inline (good for spacing) */
+    display: inline-block; 
+    
+    /* 2. Add padding to make the clickable area larger */
+    padding: 12px 30px; 
+    
+    /* 3. Style the background and text */
+    background-color: #511891; /* Your main brand color */
+    color: #ffffff; /* White text for contrast on the dark background */
+    
+    /* 4. Remove the default link underline */
+    text-decoration: none; 
+    
+    /* 5. Style the text appearance */
+    font-size: 1.1rem;
+    font-weight: 700;
+    
+    /* 6. Optional: Rounded corners */
+    border-radius: 5px; 
+    
+    /* 7. Optional: A subtle shadow to make it pop off the page */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Optional: Space above/below the button */
+    margin: 20px 0;
+}
+
+/* --------------------
+    9. BUTTON HOVER EFFECT 
+-------------------- */
+/* This is crucial for user experience—it tells the user the button is interactive */
+.button-primary:hover {
+    /* Slightly darker color when the mouse hovers over it */
+    background-color: #891ba7; 
+    
+    /* Subtle lift effect */
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease; /* Smooth transition for the effect */
+}
+
+/* --------------------
+    10. FOOTER STYLES (CENTERED CONTACT INFO)
+-------------------- */
+.main-footer {
+    /* Base Colors and Padding */
+    background-color: #333; /* Dark gray */
+    color: #f1f1f1; /* Light text for contrast */
+    padding: 30px 40px; 
+    font-size: 0.95rem;
+    
+    /* 1. KEY: Flexbox for Horizontal Layout */
+    display: flex;
+    
+    /* 2. KEY: Center all content blocks horizontally */
+    justify-content: center; 
+    
+    /* 3. Adds space between the blocks (Contact Info, About Link, Contact Link) */
+    gap: 50px; 
+    
+    align-items: flex-start; 
+}
+
+/* Style the Contact Information block */
+.main-footer .footer-nav {
+    /* Give the contact info some margin to separate it from other items */
+    margin-right: 20px;
+}
+
+.main-footer .footer-nav p {
+    margin: 0;
+    line-height: 1.5;
+    /* 4. KEY: Center the text lines *within* the contact block */
+    text-align: center; 
+}
+
+/* Style the individual links (About Us, Contact) */
+.main-footer a {
+    color: #a0a0a0; 
+    text-decoration: none;
+    padding: 5px;
+    display: block; /* Makes each link take up its own line, stacking them vertically */
+    text-align: center;
+}
+
+.main-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
